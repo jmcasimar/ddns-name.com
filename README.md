@@ -21,6 +21,8 @@ name = {
 
 ```
 
-name["domain"] is used by the script check_records.py to print all the records in that domain
-name["records"] is an array of objects pointed to the records you want to update the ip with script main.py
-name["username"] and name["token"] are the credentials provided by name.com to use its API
+* name["domain"] is used by the script check_records.py to print all the records in that domain
+
+* name["records"] is an array of objects pointed to the records you want to update the ip with script main.py
+
+* name["username"] and name["token"] are the credentials provided by name.com to use its API
