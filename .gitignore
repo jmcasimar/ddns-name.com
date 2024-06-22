@@ -1,0 +1,6 @@
+# All temporary folders
+**/temp
+**/__pycache__
+
+ # Security files
+credentials.py
