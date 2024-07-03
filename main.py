@@ -39,8 +39,9 @@ if(public_ip != ip):
     # Update records with public ip
     connection = http.client.HTTPSConnection(name_api)
     for r in records:
-        headers = { 'Authorization' : basic_auth(name_user, name_token), 'type': r["type"], 'answer': public_ip }
-        connection.request("PUT", "/v4/domains/" + r["domain"] + "/records/" + r["id"], headers=headers)
+        headers = { 'Authorization' : basic_auth(name_user, name_token) }
+        data = json.dumps({'type': r["type"], 'answer': public_ip})
+        connection.request("PUT", "/v4/domains/" + r["domain"] + "/records/" + r["id"], data, headers=headers)
         res = json.loads(connection.getresponse().read())
         print("Record updated", res)
 
